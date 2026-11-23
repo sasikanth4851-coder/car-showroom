@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #0b0b0b; color: white; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 span { color: #e63946; }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+nav a:hover { color: #e63946; }
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background:
+        linear-gradient(90deg, #000 10%, rgba(0,0,0,.12)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800")
+        center/cover;
+}
+.hero-content p { color: #ccc; margin: 20px 0; }
+.hero h1 { font-size: 65px; line-height: 1.1; }
+.hero h1 span { color: #e63946; }
+
+.btn, button {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.btn:hover, button:hover { background: #b91c2b; }
+
+.section { padding: 70px 8%; text-align: center; }
+.section h2 { font-size: 35px; }
+.subtitle { color: #aaa; margin: 15px 0 35px; }
+
+.filters, .compare-select {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #1b1b1b;
+    color: white;
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.car-card {
+    background: #191919;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    transition: .3s;
+}
+.car-card:hover { transform: translateY(-8px); }
+.car-card img { width: 100%; height: 190px; object-fit: cover; }
+.car-info { padding: 20px; }
+.car-info h3 { margin-bottom: 12px; }
+.price {
+    color: #e63946;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+.specs { color: #bbb; line-height: 1.9; }
+
+.comparison { background: #151515; }
+#comparisonResult { overflow-x: auto; }
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+td, th { padding: 15px; border: 1px solid #444; }
+th { background: #e63946; }
+
+.offer {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #64121b, #111);
+}
+.offer h2 { font-size: 35px; }
+.offer p { margin: 20px; }
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+form input, form select { width: 100%; }
+form button { width: 100%; padding: 15px; }
+#message { margin-top: 20px; color: #52df91; }
+
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 35px;
+    color: #aaa;
+}
+footer h2 { color: white; margin-bottom: 15px; }
+
+@media (max-width: 700px) {
+    header { flex-direction: column; gap: 15px; }
+    nav a { margin: 8px; font-size: 13px; }
+    .hero h1 { font-size: 45px; }
+    .section h2 { font-size: 27px; }
+}
